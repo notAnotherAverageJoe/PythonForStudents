@@ -68,7 +68,7 @@ rev_dicts = {v: k for k, v in c.items()}
 print(f"Reversed dictionary: {rev_dicts}")
 
 def freq_count_sentence(sentence):
-    seen = {}
+    seen = []
     words = sentence.split()
     print(f"Words after being split {words}")
     
