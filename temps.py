@@ -1,7 +1,7 @@
 
 class Logger:
     def login(self, message):
-        print(f"Login: {message}")
+        print(f"User Login: {message}")
     def logout(self, message):
         print(f"Logout: {message}")
 
@@ -9,12 +9,12 @@ class SystemAdmin():
     def login(self, message):
         print(f"Admin login: {message}")
         
-user1 = Logger()
-user1.login("Howdy")
-admin1 = SystemAdmin()
-admin1.login("Joe")
-            
-        
+def all_login(emps):
+    emps.login("Sytem access.")
+all_login(Logger())
+all_login(SystemAdmin())
+
+    
 
 
 
