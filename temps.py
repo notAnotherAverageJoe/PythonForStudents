@@ -1,17 +1,13 @@
+class Duck:
+    def quack(self):
+        print("Quack!")
 
-cords ={(0,0): "Main", (1,1):"Second", (2,2):"Third", (1,2):"Fourth", (1,0):"Fifth"}
+class Person:
+    def quack(self):
+        print("I'm pretending to be a duck!")
 
-for k,v in cords.items():
-    if k == (1,1):
-        print(f"Take the {cords[(1,1)]}, path!")
-    elif k == (2,2):
-        print(f"{cords[(2,2)]}, path is closed.")
-    else:
-        print(f"Wrong path")
-    
-    
+def make_it_quack(thing):
+    thing.quack()  # It doesn't matter *what* thing is, as long as it has a quack() method
 
-
-# print("" == False)
-
-# print(bool("") == bool(False))  
+make_it_quack(Duck())     # ✅ Quack!
+make_it_quack(Person())   # ✅ I'm pretending to be a duck!
