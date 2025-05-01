@@ -7,11 +7,8 @@ class Logger:
         print(f"Login: {message}")
     def logout(self, message):
         print(f"Logout: {message}")
-        
 logger = Logger()
-logger.login("Hello")
-logger.logout("Goodbye!")
-
+logger.login("Howdy!")
 class System:
     def __init__(self, mode):
         self.mode = mode
@@ -24,14 +21,18 @@ class System:
             print("Power saving mode")
         elif self.mode == 3:
             print("Power off")
+            self.logs.logout("See you tomorrow!")
         else:
             print("Invalid system operation")
 computer1 = System(1)
 computer1.power_on()
+computer2 = System(2)
+computer2.power_on()
+computer3 = System(3)
+computer3.power_on()
 
             
         
-
 
 
 
